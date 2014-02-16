@@ -1,5 +1,5 @@
 <?php
-	$destination = "style/";
+	$destination = "style";
 		if( !empty( $_FILES ) ) {
 			$destination .= $_FILES[ "file" ][ "name" ];
 			$filename = $_FILES[ "file" ][ "tmp_name" ];
@@ -11,6 +11,9 @@
 	echo "Destination: " . $destination . "</br>";
 	$open = opendir("style") ;
 		while(false != ($file = readdir( $open ))) {
-			echo $file . "</br>";
-	}
+			if( $file != "." && $file != "..") {
+				echo "Files uploaded: " . $file . "</br>";
+			}
+		}
+	closedir($open);
 ?> 
