@@ -6,8 +6,8 @@
 			move_uploaded_file($filename, $destination);
 		}	        
 	echo "Uploaded file: " . $_FILES[ "file" ][ "name" ]. "</br>";
-        echo "Type: " . $_FILES[ "file" ][ "type" ]. "</br>";
-        echo "Size: " . $_FILES[ "file" ][ "size" ]. "kb"."</br>";
+    echo "Type: " . $_FILES[ "file" ][ "type" ]. "</br>";
+    echo "Size: " . $_FILES[ "file" ][ "size" ]. "kb"."</br>";
 	echo "Destination: " . $destination . "</br>";
 	$open = opendir("style") ;
 		while (false != ($file = readdir ( $open ) ) ) {
